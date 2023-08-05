@@ -1,0 +1,895 @@
+* {
+  text-decoration: none;
+  font-family: "Calibri", "Trebuchet MS", sans-serif;
+}
+
+:root {
+  --tols: #dbb700;
+  --bg: #0e007a;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: linear-gradient(to bottom, var(--bg), rgb(4, 0, 16));
+  margin: 0;
+  padding: 20px;
+  color: var(--tols);
+}
+
+.container-logo {
+  padding: 10px;
+  margin: 0;
+  justify-content: space-between;
+}
+.container-logo .logo-sekolah .logo-img {
+  height: 100px;
+  width: 100px;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+
+.container-logo {
+  justify-content: space-between;
+}
+
+.logo-sekolah {
+  width: 350px;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.container-logo .logo-font {
+  padding-top: 20px;
+}
+
+.container-logo .logo-font font {
+  color: white;
+  font-size: 11.5px;
+}
+
+.container-logo .logo-font h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+}
+
+/* Contact Sekolah */
+
+.contact-sekolah {
+  float: right;
+  width: 400px;
+  height: 50px;
+  margin: 25px 0;
+}
+
+.contact-sekolah .imel-telp font,
+.contact-sekolah .imel-telp font a {
+  font-size: 20px;
+  color: var(--tols);
+}
+
+.contact-sekolah .imel-telp font i {
+  margin: 2px 8px;
+  color: white;
+}
+.textjalan {
+  margin-left: 300px;
+  margin-right: 300px;
+  font-size: 40px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.contact {
+  float: right;
+  background-color: #a2a2a3;
+  margin: auto;
+  width: 100px;
+}
+
+/* Navbar start */
+
+.navbar {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  background: linear-gradient(to bottom, var(--tols), #914d00eb);
+  justify-content: space-between;
+  z-index: 9999999999999999999999;
+}
+.navbar .nav-menu {
+  padding: 0;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--bg);
+}
+.navbar ul li a {
+  padding: 16px 20px;
+  margin: 0;
+  color: var(--bg);
+}
+
+.navbar #checkbox_toggle {
+  display: none;
+}
+
+.navbar .hamburger {
+  display: none;
+  padding-left: 10px;
+  font-size: 20px;
+  margin: 16px 0;
+}
+.navbar ul li a:hover {
+  background: linear-gradient(to bottom, var(--tols), #914d00eb);
+}
+.search {
+  margin-right: 10px;
+}
+#search {
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+/* Navigasi Dropdown */
+.nav-dropdown {
+  display: none;
+  list-style: none;
+  background-color: var(--tols);
+  padding: 0;
+  margin: 0;
+  width: 220px;
+  position: absolute;
+  top: 50px;
+  overflow: auto;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, var(--tols), #914d00ad);
+}
+
+.nav-dropdown li {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.nav-dropdown li a {
+  width: 180px;
+  font-size: 18px;
+  margin: 0;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+.nav-dropdown li a::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #462500;
+
+  visibility: visible;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-dropdown li a:hover::after {
+  visibility: collapse;
+  transform: scaleX(1);
+}
+
+.menu:hover .nav-dropdown {
+  display: block;
+}
+
+/* Navbar end */
+
+/* Responsif */
+
+@media (max-width: 950px) {
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: block;
+    left: -100%;
+    top: 30px;
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    box-shadow: 5px 5px 5px black;
+    background: linear-gradient(to bottom, var(--tols), #914d00, var(--bg));
+    transition: 0.5s;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    padding: 0 0px;
+    text-align: left;
+  }
+
+  .navbar ul li a {
+    width: 180px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .nav-menu .menu .nav-dropdown {
+    top: 80px;
+    left: 200px;
+    padding-right: 15.5px;
+    width: 204px;
+  }
+
+  .nav-dropdown li a {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  #checkbox_toggle:checked ~ .nav-menu {
+    left: 0;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 840px) {
+  .header {
+    margin: auto;
+  }
+  .logo-sekolah {
+    margin: auto;
+  }
+
+  .contact-sekolah {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-sekolah {
+    width: 100%;
+    margin: 0 20px;
+  }
+
+  .contact-sekolah {
+    width: 100%;
+  }
+}
+.img {
+  background-image: url(../img/desa5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  height: 800px;
+  transition: background-image 0.3s ease-in-out;
+}
+.img:hover {
+  background-image: url(../img/desa2.jpg);
+}
+.img:hover {
+  background-image: url(../img/desa3.jpg);
+}
+
+.img div {
+  display: none;
+  top: 150px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  width: 40%;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: 0.1px solid rgba(106, 44, 0, 0.147);
+}
+
+.img div h3 {
+  font-weight: 700;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.img div p {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.img div:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.01);
+  border: none;
+}
+
+.header2 {
+  background: linear-gradient(to bottom, var(--tols), #914d00);
+  height: 80px;
+  padding-top: 40px;
+  color: var(--bg);
+}
+
+/* Conten 1 */
+.Conten1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg);
+}
+
+/* Berita */
+
+.Berita-Terbaru {
+  width: 50%;
+  padding: 0 25px;
+}
+
+.Berita-Terbaru table {
+  transition: 0.5s;
+}
+
+.Berita-Terbaru table:hover {
+  transform: scale(1.05);
+}
+
+.Berita-Terbaru a h2 {
+  border: 1px solid black;
+  background-color: var(--tols);
+  border-radius: 5px;
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 25px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.Berita-Terbaru table tr td {
+  padding-right: 10px;
+}
+
+.Berita-Terbaru table tr .info-berita font {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.Berita-Terbaru table tr .info-berita h3 {
+  color: var(--tols);
+  margin: 0;
+  padding: 0;
+}
+
+/* Sambutan Kepsek - Home */
+.container-sambutankepsek {
+  padding: 0 50px;
+  width: 50%;
+}
+.container-sambutankepsek h2 {
+  color: var(--tols);
+}
+.sambutankepsek {
+  display: flexbox;
+  gap: 10px;
+}
+
+.container-sambutankepsek h2 {
+  background-color: var(--tols);
+  color: var(--bg);
+  padding: 5px 0;
+  width: 300px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.sambutankepsek .biodkepsek {
+  display: flex;
+  gap: 10px;
+}
+
+.sambutankepsek .biodkepsek table {
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.sambutankepsek .biodkepsek table tr td {
+  padding: 0 5px;
+}
+
+.sambutankepsek img {
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+}
+
+.sambutankepsek p {
+  text-align: justify;
+  padding: 0;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 810px) {
+  .Conten1 {
+    display: inline-block;
+  }
+
+  .Berita-Terbaru,
+  .container-sambutankepsek {
+    padding: 0 20px;
+    width: 90%;
+    padding-bottom: 20px;
+  }
+}
+
+/* Conten 1 end */
+
+/* Conten 2 start */
+
+.Conten2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Conten2 div {
+  width: 400px;
+  display: inline-block;
+  padding: 0 20px;
+  margin: 0;
+  border-left: 1px solid black;
+}
+
+.Conten2 .VisMis h3 {
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 25px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.Conten2 .VisMis ul {
+  list-style-type: decimal;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.Conten2 .Sejarah {
+  text-align: justify;
+}
+
+.Conten2 .Sejarah p {
+  text-transform: capitalize;
+}
+
+.Conten2 div h2 {
+  background-color: var(--tols);
+  margin: 5px;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px black;
+  font-weight: 1200;
+}
+
+.Conten2 .Pengunguman div {
+  width: 95%;
+  padding-top: 10px;
+  border: 0;
+}
+
+.Conten2 .Pengunguman div font {
+  margin: 0;
+  padding: 0;
+}
+
+.Conten2 .Pengunguman div h3 {
+  color: var(--bg);
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.Conten2 .Pengunguman div p {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.Conten2 .Pengunguman div h3:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+  .Conten2 {
+    display: block;
+    width: 90%;
+  }
+
+  .Conten2 div {
+    display: block;
+    width: 95%;
+    border-left: 0;
+    border-top: 1px solid black;
+  }
+
+  .Conten2 .Sejarah {
+    border: none;
+  }
+}
+
+/* Conteen 2 end */
+
+.info {
+  margin: 10px 20px;
+}
+
+.info font a {
+  color: black;
+}
+.info font a i {
+  font-size: 12px;
+  color: var(--bg);
+}
+
+/* Informasi lokasi keberadaan end */
+
+/* Profil Start */
+
+/* Halaman Sambutan Kepala Sekolah Start */
+
+.Container-Sambutan-Kepsek {
+  display: flex;
+  padding: 5px 20px;
+  gap: 20px;
+}
+
+.Container-Sambutan-Kepsek .Sambutan-p p {
+  text-align: justify;
+}
+
+.Container-Sambutan-Kepsek .Sambutan-Img {
+  background-color: silver;
+  height: 530px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.Container-Sambutan-Kepsek .Sambutan-Img img {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 350px;
+}
+
+@media (max-width: 1000px) {
+  .Container-Sambutan-Kepsek .Sambutan-Img {
+    height: 450px;
+  }
+
+  .Container-Sambutan-Kepsek .Sambutan-Img img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 810px) {
+  .Container-Sambutan-Kepsek .Sambutan-Img {
+    height: 330px;
+  }
+
+  .Container-Sambutan-Kepsek .Sambutan-Img img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 720px) {
+  .Container-Sambutan-Kepsek {
+    display: inline-block;
+  }
+
+  .Container-Sambutan-Kepsek .Sambutan-Img {
+    height: auto;
+  }
+
+  .Container-Sambutan-Kepsek .Sambutan-Img img {
+    width: 100%;
+  }
+}
+
+/* Halaman Sambutan Kepala Sekolah End */
+
+/* Struktur Organisasi Start */
+
+/* Struktur Organisasi End */
+
+/* Container Halaman start */
+.Container-Halaman {
+  display: flex;
+  margin: 10px 20px;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.Container-Halaman div {
+  display: inline-block;
+}
+
+.Container-Halaman .Isi-Conten {
+  width: 68%;
+}
+
+.Container-Halaman .Isi-Conten h2 i {
+  color: var(--bg);
+}
+
+.Container-Halaman .Isi-Conten p {
+  text-align: justify;
+}
+
+/* Visi - Misi start */
+.Container-Halaman .Isi-Conten .visi {
+  margin: auto;
+  width: 100px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px black;
+}
+
+.Container-Halaman .Isi-Conten ul {
+  list-style-type: decimal;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.Container-Halaman .Isi-Conten ul li {
+  padding: 3px 0;
+}
+
+/* Visi - Misi end */
+
+/* Pengunguman Sekolah start */
+.Container-Halaman .Isi-Conten div h3 {
+  padding: 0;
+  margin: 0;
+  color: var(--bg);
+}
+
+.Container-Halaman .Isi-Conten div {
+  transition: 0.3s;
+}
+
+.Container-Halaman .Isi-Conten div:hover {
+  transform: scale(1.02);
+}
+
+.Container-Halaman .Isi-Conten div p {
+  padding: 8px 0;
+  margin: 0;
+}
+
+/* Pengunguman Sekolah end */
+
+/* Berita & Informasi || Prestasi start*/
+.Container-Halaman .Isi-Conten table {
+  transition: 0.5s;
+}
+
+.Container-Halaman .Isi-Conten table:hover {
+  transform: scale(1.03);
+}
+
+.Container-Halaman .Isi-Conten table tr .info-berita h3 {
+  color: var(--bg);
+  padding: 0;
+  margin: 0;
+}
+
+.Container-Halaman .Isi-Conten table tr td p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Berita & Informasi || Prestasi end */
+
+/* ekskul start */
+.Container-Halaman .Isi-Conten table tr .ekskul {
+  padding: 0 20px;
+}
+.Container-Halaman .Isi-Conten table tr .ekskul h3 {
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+  color: black;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.Container-Halaman .Isi-Conten table tr .ekskul p {
+  padding: 0;
+  margin: 0;
+}
+
+/* ekskul end */
+
+/* Sidebar */
+.Container-Halaman .Sidebar-about {
+  padding-left: 20px;
+  width: 32%;
+  border-left: 1px dashed black;
+  height: 350px;
+}
+
+.Container-Halaman .Sidebar-about h4,
+.Container-Halaman .Sidebar-about p {
+  text-align: center;
+}
+
+.Container-Halaman .Sidebar-about table {
+  width: 100%;
+}
+
+.Container-Halaman .Sidebar-about table tr td {
+  border-bottom: 1px dashed black;
+  padding: 8px 0;
+}
+
+.Container-Halaman .Sidebar-about table tr,
+.Container-Halaman .Sidebar-about p {
+  transition: 0.3s;
+}
+
+.Container-Halaman .Sidebar-about table tr:hover,
+.Container-Halaman .Sidebar-about p:hover {
+  transform: scale(1.03);
+  font-weight: bold;
+}
+
+.Container-Halaman .Sidebar-about table tr .about-right {
+  text-align: right;
+}
+
+.Container-Halaman .Sidebar-about table tr td a {
+  color: black;
+}
+
+@media screen and (max-width: 850px) {
+  .Container-Halaman {
+    display: block;
+  }
+
+  .Container-Halaman .Isi-Conten {
+    width: 100%;
+  }
+
+  .Container-Halaman .Sidebar-about {
+    padding-top: 20px;
+    width: 95%;
+    margin-right: 20px;
+    border-left: none;
+  }
+}
+
+/* Container Halaman end */
+
+/* Profil End */
+
+/* Footer Start */
+/* Footer 1 Start */
+.footer-1 {
+  display: flex;
+  background-color: var(--bg);
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-1 div {
+  margin: 20px;
+  width: 400px;
+}
+
+.footer-1 div h2 {
+  color: var(--tols);
+}
+
+/* Motivasi strat */
+
+.footer-1 .kata2-motivasi p {
+  text-align: center;
+  color: white;
+}
+
+.footer-1 .kata2-motivasi p {
+  transition: 0.5s;
+}
+
+.footer-1 .kata2-motivasi p:hover {
+  transform: scale(1.1);
+}
+.footer-1 .kata2-motivasi p b {
+  color: var(--tols);
+}
+
+/* Motivasi end */
+
+/* lokasi start */
+.footer-1 .lokasi iframe {
+  width: 350px;
+  height: 400px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.footer-1 .lokasi iframe:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.02);
+}
+
+/* lokasi end */
+
+/* Gelery start */
+.footer-1 .gelery img {
+  display: inline-block;
+  width: 100px;
+  transition: 0.5s;
+}
+
+.footer-1 .gelery img:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.1);
+}
+
+/* Gelery end */
+
+@media screen and (max-width: 1030px) {
+  .footer-1 {
+    padding-top: 10px;
+    display: block;
+    align-self: center;
+    padding-right: 40px;
+    margin-bottom: -20px;
+  }
+
+  .footer-1 div {
+    padding-bottom: 10px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .footer-1 .lokasi iframe {
+    width: 100%;
+  }
+}
+/* Footer 1 End */
+
+/* Footer 2 Start */
+.footer-2 {
+  margin: 0;
+  padding: 5px 0;
+  background: linear-gradient(to bottom, var(--tols), #914d00);
+}
+
+.footer-2 p {
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer 2 End */
+/* Footer End */
